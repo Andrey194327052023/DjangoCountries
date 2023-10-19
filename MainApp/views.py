@@ -305,7 +305,7 @@ countries = [
 def home(request):
     text = """<h1>"Приветствую"</h1>
               <strong>Автор</strong>: <i>Лебедкин Андрей</i> <br>
-              new line
+              
            """
     return HttpResponse(text)
 
@@ -314,6 +314,6 @@ def countries_list(request):
     for i, country in enumerate(countries):
 
         result = f"""
-        <p>{i+1["i+1"]}, {country["country"]}</p>
+        ({"i+1"}, {country["country"]})
         """
-    return HttpResponse(result)
+        return HttpResponse(result)
