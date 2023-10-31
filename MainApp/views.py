@@ -305,15 +305,18 @@ countries = [
 def home(request):
     text = """<h1>"Приветствую"</h1>
               <strong>Автор</strong>: <i>Лебедкин Андрей</i> <br>
-              
+              <a href="http://127.0.0.1:8000/countries-list/">list of countries</a>
            """
     return HttpResponse(text)
 
 
 def countries_list(request):
+
     for i, country in enumerate(countries):
 
         result = f"""
         ({"i+1"}, {country["country"]})
         """
         return HttpResponse(result)
+
+
