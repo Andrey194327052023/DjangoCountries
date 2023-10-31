@@ -311,12 +311,11 @@ def home(request):
 
 
 def countries_list(request):
-
     for i, country in enumerate(countries):
 
-        result = f"""
-        ({"i+1"}, {country["country"]})
-        """
+        result = ((i+1), (country["country"]))
+        
+        
         return HttpResponse(result)
 
 
